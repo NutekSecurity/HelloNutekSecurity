@@ -1,40 +1,199 @@
 <!DOCTYPE html>
 <html>
-<head>
-<style>
-.container {
-  /*padding-left: 50%;*/
-}
-img {
-  margin-left: 36%;
-  float: left;
-  margin-right: 20px;
-  width: 100px;
-  height: 100px;
-}
-h1 {
-  /*text-align: center;*/
-  font-family: 'Helvetica';
-}
-p {
-  /*text-align: center;*/
-}
-a {
-  color: #add8e6;
-  font-family: Helvetica, sans-serif;
-}
-#header-address {
-  text-decoration: underline;
-}
-</style>
-</head>
-<body>
+  <head>
+    <style>
+      body {
+        margin: 3%;
+        border: 3px solid black;
+      }
+      navbar {
+        margin: 0;
+        padding: 0;
+        text-align: left;
+      }
+      nav {
+        list-style: none;
+        padding: 0;
+        margin: 3%;
+        margin-top: 8%;
+        margin-bottom: 0%;
+        clear: both;
+        text-align: center;
+        font-family: Helvetica, sans-serif;
+        text-decoration: line-through;
+      }
+      nav li {
+        font-size: large;
+        display: inline;
+        margin-right: 21px;
+        white-space: nowrap;
+      }
+      nav li a {
+        text-decoration: none;
+        color: #000000;
+      }
+      nav li a:visited {
+        text-decoration: none;
+        color: #000000;
+      }
+      nav li a:hover {
+        color: #6656df;
+      }
+      #img-kotek {
+        margin-left: 24%;
+        float: left;
+        margin-right: 20px;
+        width: 13%;
+        height: 13%;
+      }
+      #img-kotek:hover {
+        width: 10%;
+        height: 10%;
+      }
+      #img-bonita {
+        float: right;
+        margin-left: 20px;
+        width: 44%;
+      }
+      h1 {
+        /*text-align: center;*/
+        font-family: 'Helvetica', sans-serif;
+      }
+      h1 #hello {
+        color: #6656df;
+        padding-left: 3%;
+      }
+      p {
+        /*text-align: center;*/
+        font-family: Helvetica, sans-serif;
+      }
+      article {
+        margin: 7%;
+        margin-top: 0%;
+        margin-bottom: 4%;
+        clear: both;
+      }
+      article h2 {
+        text-align: center;
+        font-family: Helvetica, sans-serif;
+        color: darkmagenta;
+        margin-bottom: 4%;
+      }
+      article p {
+        line-height: 1.6;
+        text-align: center;
+        font-family: Helvetica, sans-serif;
+        color: darkolivegreen;
+      }
+      #a-mailto {
+        color: #add8e6;
+        font-family: Helvetica, sans-serif;
+        text-decoration: none;
+        padding-left: 3%;
+      }
+      #a-mailto:hover {
+        color: #000000;
+        font-family: Helvetica, sans-serif;
+        font-weight: bold;
+      }
+      #header-address {
+        text-decoration: underline;
+        margin: 3% 0 0 3%;
+        /* font-size: medium; */
+        clear: both;
+      }
+      .text-green {
+        font-size: medium;
+        color: #00ff00;
+      }
+      .text-red {
+        font-size: medium;
+        color: #ff0000;
+      }
+      .pozdrawiam {
+        margin-left: 10%;
+        padding-bottom: 13%;
+        clear: both;
+      }
+      .pozdrawiam #pozdrawiam {
+        float: left;
+        margin-top: 0;
+      }
+      .pozdrawiam #img-bonita {
+        margin-right: 10%;
+        margin-left: 0;
+      }
+      .pozdrawiam a:hover #img-bonita {
+        width: 50%;
+      }
+      footer {
+        text-align: center;
+        clear: both;
+        margin-top: 10%;
+      }
+      footer hr {
+        width: 50%;
+      }
 
-<div class"container">
-<a href="github-nutek-terminal.jpg" target="_blank"><img src="github-nutek-terminal.jpg" alt="logo"></a>
-<h1>Hello <span id="header-address">nuteksecurity.com</span></h1>
-<p><a href="mailto:neosb@nuteksecurity.com?subject=SecurityAlert-PleaseHelp">neosb@nuteksecurity.com</a></p>
-</div>
-  
+    </style>
+  </head>
+<body>
+  <navbar>
+    <p id="time"></p>
+    <script>setInterval(() => {
+      document.getElementById("time").innerHTML = new Date().toLocaleDateString() + ", " + new Date().toLocaleTimeString();
+    }, 1000);</script>
+  </navbar>
+
+  <div id="jumbotron">
+    <a href="github-nutek-terminal.jpg" target="_blank">
+      <img id="img-kotek" src="github-nutek-terminal.jpg" alt="kotek haczy"/>
+    </a>
+    <h1><span id="hello"></span>Hello </span><span id="header-address">nuteksecurity.com</span></h1>
+    <p>
+      <a id="a-mailto" href="mailto:neosb@nuteksecurity.com?subject=SecurityAlert-PleaseHelp">neosb@nuteksecurity.com</a>
+    </p>
+  </div>
+    
+  <nav>
+    <ul>
+      <li><a href="#">Self Help</a></li>
+      <li><a href="#">Blog</a></li>
+      <li><a href="#">Music for <span class="text-green">better</span> or <span class="text-red">worse</span></a></li>
+      <li><a href="#">Network Security Services</a></li>
+    </ul>
+  </nav>
+
+  <article>
+    <h2>Kind<br/>Introduction</h2>
+    <!-- O tym czymś, co doprowadziło mnie tu i pędzzi dalej... -->
+    <p>
+      Meet our founder, a unique blend of rhythm and resilience. Known to the world as a celebrated music artist, he has been orchestrating melodies that resonate with audiences globally. But his symphony doesn’t end there. Recognizing the growing threats in the digital world, he decided to pivot his career towards network security.
+    </p>
+
+    <p>
+      His experience in the music industry, dealing with intellectual property rights and digital distribution, made him acutely aware of the vulnerabilities that exist in our interconnected world. This awareness sparked a desire to protect not just his own creative work, but the valuable data of others as well.
+    </p>
+
+    <p>
+      Thus, he founded our network security company. His mission: to harmonize security protocols and innovation, much like he did with rhythm and lyrics in his music. His goal is to prevent the ‘bigger issues’ he’s witnessed firsthand, safeguarding digital assets with the same passion he put into his music.
+    </p>
+
+    <p>
+      His journey from music stages to cybersecurity spaces is a testament to his versatility and commitment. He believes that in both music and security, harmony is the key. And under his leadership, we are committed to orchestrating a safer digital world. Welcome to our symphony of security.
+    </p>
+  </article>
+
+  <div class="pozdrawiam">
+    <p id="pozdrawiam">Pozdrawiam,<br/>Szymon & 🎶</p>
+    <a href="termshark-bonita.png" target="_blank">
+      <img id="img-bonita" src="termshark-bonita.png" alt="termshark in Warp Terminal"/>
+    </a>
+  </div class="pozdrawiam">
+
+  <footer>
+    <hr/>
+    <p><span id="year"></span><script>var year = document.getElementById("year"); year.innerHTML = new Date().getFullYear();</script> &copy; nuteksecurity.com</p>
+  </footer>
 </body>
 </html>
